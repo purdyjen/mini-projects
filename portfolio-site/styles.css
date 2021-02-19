@@ -1,0 +1,56 @@
+/* body {
+    background-color: #000000;
+} */
+
+body {
+    --text-color: #222;
+    background-image: url("images/what-the-hex.png");
+    background-repeat: repeat;
+    --bkg-color: #fff;
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    background-image: url("images/what-the-hex-dark.png");
+    background-repeat: repeat;
+    --bkg-color: #121212;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+      --text-color: #eee;
+    background-image: url("images/what-the-hex-dark.png");
+    background-repeat: repeat;
+      --bkg-color: #121212;
+    }
+    body.light-theme {
+      --text-color: #222;
+    background-image: url("images/what-the-hex.png");
+    background-repeat: repeat;
+      --bkg-color: #fff;
+    }
+  }
+  
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* body {
+    background: var(--bkg-color);
+  } */
+  
+  h1,
+  p {
+    color: var(--text-color);
+  }
+  
+  #theme-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      border-radius: 1rem;
+      padding:0.2rem;
+      background-color: #eee;
+  }
+  
+  
