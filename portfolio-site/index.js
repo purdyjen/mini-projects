@@ -10,13 +10,12 @@ if (currentTheme == "dark-theme") {
   moonBtn.style.display = "none";
   console.log("first dark theme selected");
 }
-//  else if (prefersDarkScheme.matches) {
-//   document.body.classList = "dark-theme";
-//   sunBtn.style.display = "visible";
-//   moonBtn.style.display = "none";
-//   console.log("second dark theme selected");
-
-// }
+ else if (prefersDarkScheme.matches && currentTheme !== "light-theme") {
+  document.body.classList = "dark-theme";
+  sunBtn.style.display = "visible";
+  moonBtn.style.display = "none";
+  console.log("second dark theme selected");
+}
 else {
   document.body.classList = "light-theme";
   sunBtn.style.display = "none";
